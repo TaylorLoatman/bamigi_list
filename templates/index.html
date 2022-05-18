@@ -9,55 +9,56 @@
         </div>
     </header>
 
-    <main class="px-3">
-        <div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog"
-             id="modalSignin">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content rounded-5 shadow">
-                    <div class="modal-header p-5 pb-4 border-bottom-0">
-                        <h2 class="modal-title fw-bold mb-0">Stay Plugged In!</h2>
-                    </div>
 
-                    <div class="modal-body p-5 pt-0">
-                        <p class="text-start">Join the hustlers network get 10% off your first purchase and stay up-to-date on all
-                            releases, popup shops, featured events, etc.</p>
-                        <br>
-                        {% with messages = get_flashed_messages() %}
-                            {% if messages %}
-                                {% for message in messages %}
-                                    <p>{{ message }}</p>
-                                {% endfor %}
-                            {% endif %}
-                        {% endwith %}
-                        <form action="{{ url_for('home') }}" method="POST" class="" novalidate>
-                            <div class="form-floating mb-3">
-                                <input type="text" name="name" class="form-control rounded-4" id="floatingName"
-                                       placeholder="John/Jane Doe">
-                                <label for="floatingName">Name</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="text" name="phone" class="form-control rounded-4" id="floatingPassword"
-                                       placeholder="Phone Number">
-                                <label for="floatingPassword">Phone Number</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="date" name="birthday" class="form-control rounded-4" id="floatingInput">
-                                <label for="floatingInput">Birthday</label>
-                            </div>
+    <div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog"
+         id="modalSignin">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-5 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h2 class="modal-title fw-bold mb-0">Stay Plugged In!</h2>
+                </div>
 
-                            <button class="w-100 mb-2 btn btn-lg btn-dark" type="submit">Sign up</button>
-                            <a class="instagram" href="https://www.instagram.com/bamigi/">
+                <div class="modal-body p-5 pt-0">
+                    <p class="text-start">Join the hustlers network get 10% off your first purchase and stay up-to-date
+                        on all
+                        releases, popup shops, featured events, etc.</p>
+                    <br>
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    {% for message in messages %}
+                    <p>{{ message }}</p>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
+                    <form action="{{ url_for('home') }}" method="POST" novalidate>
+                        <div class="form-floating mb-3">
+                            <input type="text" name="name" class="form-control rounded-4" id="floatingName"
+                                   placeholder="John/Jane Doe">
+                            <label for="floatingName">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" name="phone" class="form-control rounded-4" id="floatingPassword"
+                                   placeholder="Phone Number">
+                            <label for="floatingPassword">Phone Number</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="date" name="birthday" class="form-control rounded-4" id="floatingInput">
+                            <label for="floatingInput">Birthday</label>
+                        </div>
+
+                        <button class="w-100 mb-2 btn btn-lg btn-dark" type="submit">Sign up</button>
+                        <a class="instagram" href="https://www.instagram.com/bamigi/">
                             <small class="">Follow Us on Instagram</small> <br>
                             <i class="fa-brands fa-instagram"></i>
-                                </a>
+                        </a>
 
-                        </form>
-                    </div>
-
+                    </form>
                 </div>
+
             </div>
         </div>
-    </main>
+    </div>
+
 </div>
 
 {% endblock %}
