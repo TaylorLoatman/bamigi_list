@@ -1,0 +1,8 @@
+# created by virtualenv automatically
+*.log
+*.pyc
+*.iml
+*.xml
+venv/
+/security.py
+

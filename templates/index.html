@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+        <div>
+            <h3 class="float-md-start mb-0">BAMIGI</h3>
+
+        </div>
+    </header>
+
+    <main class="px-3">
+        <div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog"
+             id="modalSignin">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content rounded-5 shadow">
+                    <div class="modal-header p-5 pb-4 border-bottom-0">
+                        <!-- <h5 class="modal-title">Modal title</h5> -->
+                        <h2 class="fw-bold mb-0">Stay Plugged In!</h2>
+<!--                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+                    </div>
+
+                    <div class="modal-body p-5 pt-0">
+                        <p>Join the hustlers network get 10% off your first purchase and stay up-to-date on all releases, popup shops, featured events, etc.</p>
+                        <br>
+                        <form class="">
+                            <div class="form-floating mb-3">
+                                <input type="name" class="form-control rounded-4" id="floatingName"
+                                       placeholder="John/Jane Doe">
+                                <label for="floatingName">Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control rounded-4" id="floatingInput"
+                                       placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control rounded-4" id="floatingPassword"
+                                       placeholder="Phone Number">
+                                <label for="floatingPassword">Phone Number</label>
+                            </div>
+                            <button class="w-100 mb-2 btn btn-lg btn-dark" type="submit">Sign up</button>
+                            <small class="">By clicking Sign up, you agree to the terms of use.</small>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+{% endblock %}
+
+
