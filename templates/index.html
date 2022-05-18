@@ -4,7 +4,7 @@
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="mb-auto">
         <div>
-            <h3 class="float-md-start mb-0">BAMIGI</h3>
+            <h3 class="float-md-start title mb-0">BAMIGI</h3>
 
         </div>
     </header>
@@ -15,35 +15,45 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content rounded-5 shadow">
                     <div class="modal-header p-5 pb-4 border-bottom-0">
-                        <!-- <h5 class="modal-title">Modal title</h5> -->
-                        <h2 class="fw-bold mb-0">Stay Plugged In!</h2>
-<!--                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+                        <h2 class="modal-title fw-bold mb-0">Stay Plugged In!</h2>
                     </div>
 
                     <div class="modal-body p-5 pt-0">
-                        <p>Join the hustlers network get 10% off your first purchase and stay up-to-date on all releases, popup shops, featured events, etc.</p>
+                        <p class="text-start">Join the hustlers network get 10% off your first purchase and stay up-to-date on all
+                            releases, popup shops, featured events, etc.</p>
                         <br>
-                        <form class="">
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <p>{{ message }}</p>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                        <form action="{{ url_for('home') }}" method="POST" class="" novalidate>
                             <div class="form-floating mb-3">
-                                <input type="name" class="form-control rounded-4" id="floatingName"
+                                <input type="text" name="name" class="form-control rounded-4" id="floatingName"
                                        placeholder="John/Jane Doe">
                                 <label for="floatingName">Name</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control rounded-4" id="floatingInput"
-                                       placeholder="name@example.com">
-                                <label for="floatingInput">Email address</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="password" class="form-control rounded-4" id="floatingPassword"
+                                <input type="text" name="phone" class="form-control rounded-4" id="floatingPassword"
                                        placeholder="Phone Number">
                                 <label for="floatingPassword">Phone Number</label>
                             </div>
+                            <div class="form-floating mb-3">
+                                <input type="date" name="birthday" class="form-control rounded-4" id="floatingInput">
+                                <label for="floatingInput">Birthday</label>
+                            </div>
+
                             <button class="w-100 mb-2 btn btn-lg btn-dark" type="submit">Sign up</button>
-                            <small class="">By clicking Sign up, you agree to the terms of use.</small>
+                            <a class="instagram" href="https://www.instagram.com/bamigi/">
+                            <small class="">Follow Us on Instagram</small> <br>
+                            <i class="fa-brands fa-instagram"></i>
+                                </a>
 
                         </form>
                     </div>
+
                 </div>
             </div>
         </div>

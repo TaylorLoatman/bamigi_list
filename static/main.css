@@ -16,12 +16,13 @@ body {
 header h3 {
     font-family: 'Anton', sans-serif;
     font-size: 3rem;
-    color: rgba(0, 0, 0, 1)
+    color: rgba(255, 255, 255, 1)
 }
 
 .modal-content {
-    background-color: rgba(255, 255, 255, 0.37)
+    background-color: rgba(255, 255, 255, 0.43)
 }
+
 
 .rounded-4 {
     border-radius: .5rem;
@@ -51,3 +52,9 @@ header h3 {
 .added {
     color: rgba(0, 0, 0, 1);
 }
+
+.instagram {
+      color: rgba(0, 0, 0, 1);
+}
+
+

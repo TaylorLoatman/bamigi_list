@@ -3,6 +3,7 @@
 *.pyc
 *.iml
 *.xml
+*.db
 venv/
 /security.py
 
