@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+        <div>
+            <h3 class="float-md-start title mb-0">BAMIGI</h3>
+
+        </div>
+    </header>
+
+    <div class="modal modal-signin position-static d-block py-5" tabindex="-1" role="dialog"
+         id="modalSignin">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-5 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h2 class="modal-title fw-bold mb-0">Plugged In!</h2>
+                </div>
+
+                <div class="modal-body p-5 pt-0">
+                    <p class="text-start">We got you all plugged in! We promise not to spam you.
+                        Now that you're apart of the hustlers network enjoy 10% off your next purchase
+                        (CODE: ALLPLUGGEDIN) https://bamigi.shop/</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

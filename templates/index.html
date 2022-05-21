@@ -21,14 +21,14 @@
                     <p class="text-start">Join the hustlers network get 10% off your first purchase and stay up-to-date
                         on all
                         releases, popup shops, featured events, etc.</p>
-                    <br>
-                    {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                    {% for message in messages %}
-                    <p>{{ message }}</p>
-                    {% endfor %}
-                    {% endif %}
-                    {% endwith %}
+<!--                    <br>-->
+<!--                    {% with messages = get_flashed_messages() %}-->
+<!--                    {% if messages %}-->
+<!--                    {% for message in messages %}-->
+<!--                    <p>{{ message }}</p>-->
+<!--                    {% endfor %}-->
+<!--                    {% endif %}-->
+<!--                    {% endwith %}-->
                     <form action="{{ url_for('home') }}" method="POST" novalidate>
                         <div class="form-floating mb-3">
                             <input type="text" name="name" class="form-control rounded-4" id="floatingName"
