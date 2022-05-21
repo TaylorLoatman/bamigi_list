@@ -1,11 +1,15 @@
-import security
 from twilio.rest import Client
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 
 class SMSAlert:
     def __init__(self):
-        self.sid = security.sms_sid
-        self.token = security.sms_token
-        self.number = security.sms_number
+        self.sid = os.getenv("SMS_SID")
+        self.token = os.getenv("SMS_TOKEN")
+        self.number = os.getenv("SMS_NUM")
 
     def send_msg(self, name, number):
         client = Client(self.sid, self.token)

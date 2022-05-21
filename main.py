@@ -1,14 +1,22 @@
 from flask import Flask, render_template, request, flash
 from flask_sqlalchemy import SQLAlchemy
-import security
 from modules.sms_alert import SMSAlert
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+
+SECRET_KEY = os.getenv("SECRET_KEY")
+SQL_PW = os.getenv("SQL_PW")
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = security.app_key
+app.config['SECRET_KEY'] = SECRET_KEY
+
 
 # Connect Database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bamigi.db'
+# New mysql db
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://BamigiBrand:{SQL_PW}@BamigiBrand.mysql.pythonanywhere-services.com/BamigiBrand$sms_list'
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -18,10 +26,8 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100))
     birthday = db.Column(db.String(10))
-    phone = db.Column(db.Integer, unique=True)
+    phone = db.Column(db.Integer)
 
-
-db.create_all()
 
 
 @app.route('/', methods=['GET', 'POST'])
