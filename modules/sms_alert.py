@@ -16,7 +16,7 @@ class SMSAlert:
         message = client.messages.create(
             body=f"{name}, we got you all plugged in! We promise not to spam you."
                  f"Now that you're apart of the hustlers network enjoy 10% off your next purchase "
-                 f"(CODE: ALLPLUGGEDIN) https://bamigishop.square.site/",
+                 f"(CODE: ALLPLUGGEDIN) https://bamigi.shop/",
             from_=self.number,
             to=f"+1{number}"
         )
